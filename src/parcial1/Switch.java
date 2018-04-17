@@ -90,7 +90,15 @@ public class Switch extends Dispositivo{
 
     @Override
     public Boolean conectarSwitch(Switch marianita) {
-        return false;
+        boolean flag = true;
+        if(bocas <= 0)
+            flag = false;
+        if (flag){
+            macDispositivosConectados.add(marianita.getMac());
+            bocas--;
+
+        }
+        return flag;  
     }
 
     @Override
@@ -98,8 +106,11 @@ public class Switch extends Dispositivo{
         boolean flag = true;
         if(bocas <= 0)
             flag = false;
-        if (flag)
+        if (flag){
+            macDispositivosConectados.add(router.getMac());
             bocas--;
+
+        }
         return flag;
     }
 
@@ -108,8 +119,11 @@ public class Switch extends Dispositivo{
         boolean flag = true;
         if(bocas <= 0)
             flag = false;
-        if (flag)
+        if (flag){
+            macDispositivosConectados.add(hub.getMac());
             bocas--;
+
+        }
         return flag;
     }
 

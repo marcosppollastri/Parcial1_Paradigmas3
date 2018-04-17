@@ -58,8 +58,11 @@ public class AccessPoint extends Dispositivo{
         boolean flag = true;
         if(bocas <= 0)
             flag = false;
-        if (flag)
+        if (flag){
+            macDispositivosConectados.add(marianita.getMac());
             bocas--;
+
+        }
         return flag;
     }
 
@@ -73,8 +76,11 @@ public class AccessPoint extends Dispositivo{
         boolean flag = true;
         if(bocas <= 0)
             flag = false;
-        if (flag)
+        if (flag){
+            macDispositivosConectados.add(hub.getMac());
             bocas--;
+
+        }
         return flag;
     }
 

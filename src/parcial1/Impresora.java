@@ -14,6 +14,8 @@ import java.util.ArrayList;
 public class Impresora extends Equipo {
     private String tipo;
     private String ip;
+    private String idPcConectada;
+    private Boolean estaConectado;
 
     public Impresora(String modelo, String id,String tipo, String ip) {
         this.tipo = tipo;
@@ -65,5 +67,24 @@ public class Impresora extends Equipo {
 
     public void setPlacas(ArrayList<PlacaDeRed> placas) {
         this.placas = placas;
+    }
+
+    public void setIdPcConectada(String idPcConectada) {
+        this.idPcConectada = idPcConectada;
+    }
+
+    public void setEstaConectado(Boolean estaConectado) {
+        this.estaConectado = estaConectado;
+    }
+    
+    public Boolean conectarPc(Pc pc){
+        boolean flag = true;
+        if(!estaConectado)
+            flag = false;
+        if (flag){
+            idPcConectada = pc.getId();
+
+        }
+        return flag;
     }
 }

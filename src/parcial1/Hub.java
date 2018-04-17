@@ -46,12 +46,28 @@ public class Hub extends Dispositivo{
 
     @Override
     public Boolean conectarHub(Hub hub) {
-        return false;
+        boolean flag = true;
+        if(bocas <= 0)
+            flag = false;
+        if (flag){
+            macDispositivosConectados.add(hub.getMac());
+            bocas--;
+
+        }
+        return flag;    
     }
 
     @Override
     public Boolean conectarAccessPoint(AccessPoint ap) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        boolean flag = true;
+        if(bocas <= 0)
+            flag = false;
+        if (flag){
+            macDispositivosConectados.add(ap.getMac());
+            bocas--;
+
+        }
+        return flag;        
     }
 
     @Override
@@ -76,18 +92,46 @@ public class Hub extends Dispositivo{
 
     @Override
     public Boolean conectarImpresora(Impresora impresora) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+        ArrayList<PlacaDeRed> placasDeImpresora  = impresora.getPlacas();
+        boolean flag = true;
+        if(bocas <= 0)
+            flag = false;
+        if (flag && !placasDeImpresora.isEmpty()){
+            for(int i = 0; i < placasDeImpresora.size(); i++){
+                if(!placasDeImpresora.get(i).EstaConectado()){
+                    macDispositivosConectados.add(placasDeImpresora.get(i).getMac());
+                    bocas--;
+                    break;
+                }
+            }
+
+
+        }
+        return flag;    }
 
     @Override
     public Boolean conectarNotebook(Notebook notebook) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return false;
     }
 
     @Override
     public Boolean conectarPc(Pc pc) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+       ArrayList<PlacaDeRed> placasDePc  = pc.getPlacas();
+        boolean flag = true;
+        if(bocas <= 0)
+            flag = false;
+        if (flag && !placasDePc.isEmpty()){
+            for(int i = 0; i < placasDePc.size(); i++){
+                if(!placasDePc.get(i).EstaConectado()){
+                    macDispositivosConectados.add(placasDePc.get(i).getMac());
+                    bocas--;
+                    break;
+                }
+            }
+
+
+        }
+        return flag;    }
 
     public String getModelo() {
         return modelo;

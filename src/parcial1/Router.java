@@ -86,6 +86,104 @@ public class Router extends Dispositivo{
         return false;
     }
 
+    public Switch getMarianita() {
+        return marianita;
+    }
+
+    public ArrayList<Isp> getIsp() {
+        return isp;
+    }
+
+    public int getCantBocasWan() {
+        return cantBocasWan;
+    }
+
+    public int getCantAntenas() {
+        return cantAntenas;
+    }
+
+    public String getMac() {
+        return mac;
+    }
+
+    public String getModelo() {
+        return modelo;
+    }
+
+    public String getTipo() {
+        return tipo;
+    }
+
+    public float getVelocidad() {
+        return velocidad;
+    }
+
+    public String getNormaEthernet() {
+        return normaEthernet;
+    }
+
+    public int getBocas() {
+        return bocas;
+    }
+
+    public String getIp() {
+        return ip;
+    }
+
+    public ArrayList<String> getMacDispositivosConectados() {
+        return macDispositivosConectados;
+    }
+
+    public void setMarianita(Switch marianita) {
+        this.marianita = marianita;
+    }
+
+    public void setIsp(ArrayList<Isp> isp) {
+        this.isp = isp;
+    }
+
+    public void setCantBocasWan(int cantBocasWan) {
+        this.cantBocasWan = cantBocasWan;
+    }
+
+    public void setCantAntenas(int cantAntenas) {
+        this.cantAntenas = cantAntenas;
+    }
+
+    public void setMac(String mac) {
+        this.mac = mac;
+    }
+
+    public void setModelo(String modelo) {
+        this.modelo = modelo;
+    }
+
+    public void setTipo(String tipo) {
+        this.tipo = tipo;
+    }
+
+    public void setVelocidad(float velocidad) {
+        this.velocidad = velocidad;
+    }
+
+    public void setNormaEthernet(String normaEthernet) {
+        this.normaEthernet = normaEthernet;
+    }
+
+    public void setBocas(int bocas) {
+        this.bocas = bocas;
+    }
+
+    public void setIp(String ip) {
+        this.ip = ip;
+    }
+
+    public void setMacDispositivosConectados(ArrayList<String> macDispositivosConectados) {
+        this.macDispositivosConectados = macDispositivosConectados;
+    }
+    
+    
+
 
 
 }
