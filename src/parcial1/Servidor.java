@@ -9,7 +9,11 @@ import java.util.ArrayList;
 
 /**
  *
- * @author Marcos
+ * @author
+ * Marcos J. Peña Pollastri
+ * Emanuel A. Cortez Mercado
+ * Martín L. Castellitto Secreto
+ * Jesus G. Kuti   
  */
 public class Servidor extends Equipo {
    // private String puertos;
@@ -20,17 +24,17 @@ public class Servidor extends Equipo {
         this.id = id;
         this.modelo = modelo;
         placas = null;
-        
+
       //  this.puertos = puertos;
         this.ip = ip;
         this.nombre = nombre;
     }
-    
+
     public void addPlaca(PlacaDeRed plaquita){
         placas.add(plaquita);
-        
+
     }
-    
+
     public boolean sePuedeConectar(){
         boolean flag = true;
         if(placas.isEmpty())

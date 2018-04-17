@@ -9,15 +9,19 @@ import java.util.ArrayList;
 
 /**
  *
- * @author Marcos
+ * @author
+ * Marcos J. Peña Pollastri
+ * Emanuel A. Cortez Mercado
+ * Martín L. Castellitto Secreto
+ * Jesus G. Kuti   
  */
 public class PlacaDeRed extends Dispositivo{
-    
+
     private boolean estaConectado;
 
-    public PlacaDeRed(String mac, String modelo, String tipo, float velocidad, 
+    public PlacaDeRed(String mac, String modelo, String tipo, float velocidad,
                         String normaEthernet, int bocas, String ip) {
-        
+
         estaConectado = false;
         macDispositivosConectados = null;
         this.mac = mac;
@@ -50,8 +54,8 @@ public class PlacaDeRed extends Dispositivo{
         this.estaConectado = estaConectado;
     }
 
-    
-    
+
+
     @Override
     public Boolean conectarRouter(Router router) {
         return false;
@@ -164,8 +168,8 @@ public class PlacaDeRed extends Dispositivo{
     }
 
 
-    
-    
 
-    
+
+
+
 }

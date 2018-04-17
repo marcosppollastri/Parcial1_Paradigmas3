@@ -7,14 +7,18 @@ package parcial1;
 
 /**
  *
- * @author Marcos
+ * @author
+ * Marcos J. Peña Pollastri
+ * Emanuel A. Cortez Mercado
+ * Martín L. Castellitto Secreto
+ * Jesus G. Kuti   
  */
 public interface IConexionE {
-    
+
     public Boolean conectarServer(Servidor servidor);
     public Boolean conectarImpresora(Impresora impresora);
     public Boolean conectarNotebook(Notebook notebook);
     public Boolean conectarPc(Pc pc);
-    
-    
+
+
 }

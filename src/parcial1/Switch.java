@@ -9,13 +9,17 @@ import java.util.ArrayList;
 
 /**
  *
- * @author Marcos
+ * @author
+ * Marcos J. Peña Pollastri
+ * Emanuel A. Cortez Mercado
+ * Martín L. Castellitto Secreto
+ * Jesus G. Kuti   
  */
 public class Switch extends Dispositivo{
 
-    public Switch(String mac, String modelo, String tipo, float velocidad, 
+    public Switch(String mac, String modelo, String tipo, float velocidad,
                         String normaEthernet, int bocas, String ip) {
-        
+
         this.mac = mac;
         this.modelo =  modelo;
         this.tipo = tipo;
@@ -23,11 +27,11 @@ public class Switch extends Dispositivo{
         this.normaEthernet = normaEthernet;
         this.bocas= bocas;
         this.ip = ip;
-        
+
     }
 
-    
-    
+
+
     public void setMac(String mac) {
         this.mac = mac;
     }
@@ -55,8 +59,8 @@ public class Switch extends Dispositivo{
     public void setIp(String ip) {
         this.ip = ip;
     }
-    
-    
+
+
 
     public String getMac() {
         return mac;
@@ -85,8 +89,8 @@ public class Switch extends Dispositivo{
     public String getIp() {
         return ip;
     }
-    
-    
+
+
 
     @Override
     public Boolean conectarSwitch(Switch marianita) {
@@ -98,7 +102,7 @@ public class Switch extends Dispositivo{
             bocas--;
 
         }
-        return flag;  
+        return flag;
     }
 
     @Override
@@ -205,5 +209,5 @@ public class Switch extends Dispositivo{
         return flag;
     }
 
-    
+
 }

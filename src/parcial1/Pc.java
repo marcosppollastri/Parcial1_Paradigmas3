@@ -9,7 +9,11 @@ import java.util.ArrayList;
 
 /**
  *
- * @author Marcos
+ * @author
+ * Marcos J. Peña Pollastri
+ * Emanuel A. Cortez Mercado
+ * Martín L. Castellitto Secreto
+ * Jesus G. Kuti   
  */
 public class Pc extends Equipo {
     private String so;
@@ -24,13 +28,13 @@ public class Pc extends Equipo {
     private String placaDeVideo;
     private String lectora;
 
-    public Pc(String id, String modelo, String so, String puerto, String ip, String ram, String placaMadre, 
-            String discoRigido, String procesador, String fuente, String gabinete, 
+    public Pc(String id, String modelo, String so, String puerto, String ip, String ram, String placaMadre,
+            String discoRigido, String procesador, String fuente, String gabinete,
             String placaDeVideo, String lectora) {
         this.id = id;
         this.modelo = modelo;
         placas = null;
-        
+
         this.so = so;
         this.puerto = puerto;
         this.ip = ip;
@@ -47,7 +51,7 @@ public class Pc extends Equipo {
     public void addPlaca(PlacaDeRed plaquita){
         placas.add(plaquita);
     }
-    
+
     public String getSo() {
         return so;
     }

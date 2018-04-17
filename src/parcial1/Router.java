@@ -9,10 +9,14 @@ import java.util.ArrayList;
 
 /**
  *
- * @author Marcos
+ * @author
+ * Marcos J. Peña Pollastri
+ * Emanuel A. Cortez Mercado
+ * Martín L. Castellitto Secreto
+ * Jesus G. Kuti   
  */
 public class Router extends Dispositivo{
-    
+
     private Switch marianita;   //switch conectado llamado marianita por alguna razon
     private ArrayList<Isp> isp;
     private int cantBocasWan;
@@ -24,9 +28,9 @@ public class Router extends Dispositivo{
         this.cantBocasWan = cantBocasWan;
         this.cantAntenas = cantAntenas;
     }
-    
-    
-    
+
+
+
     public boolean conectarIsp(Isp isp){
         boolean flag = true;
         if(cantBocasWan <= 0)
@@ -36,9 +40,9 @@ public class Router extends Dispositivo{
             this.isp.add(isp);
         }
         return flag;
-        
+
     }
-    
+
     @Override
     public Boolean conectarSwitch(Switch marianita) {
         boolean flag = true;
@@ -181,8 +185,8 @@ public class Router extends Dispositivo{
     public void setMacDispositivosConectados(ArrayList<String> macDispositivosConectados) {
         this.macDispositivosConectados = macDispositivosConectados;
     }
-    
-    
+
+
 
 
 

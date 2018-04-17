@@ -7,7 +7,12 @@ package parcial1;
 
 /**
  *
- * @author Marcos
+ * @author
+
+* Marcos J. Peña Pollastri
+* Emanuel A. Cortez Mercado
+* Martín L. Castellitto Secreto
+* Jesus G. Kuti
  */
 public class Parcial1 {
 
@@ -15,7 +20,7 @@ public class Parcial1 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-    
+
         /*Isp isp = new Isp("Garchanet",5,"tu vieja",600);
         String nombreIsp = isp.getNombre();
         System.out.println(nombreIsp);
@@ -23,8 +28,8 @@ public class Parcial1 {
         String nombreIsp2 = isp.getNombre();
         System.out.println(nombreIsp);
         System.out.println(nombreIsp2);*/
-        
-        
+
+
     }
-    
+
 }

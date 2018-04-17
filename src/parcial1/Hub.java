@@ -9,13 +9,17 @@ import java.util.ArrayList;
 
 /**
  *
- * @author Marcos
+ * @author
+ * Marcos J. Peña Pollastri
+ * Emanuel A. Cortez Mercado
+ * Martín L. Castellitto Secreto
+ * Jesus G. Kuti   
  */
 public class Hub extends Dispositivo{
 
-        public Hub(String mac, String modelo, String tipo, float velocidad, 
+        public Hub(String mac, String modelo, String tipo, float velocidad,
                         String normaEthernet, int bocas) {
-        
+
         this.mac = mac;
         this.modelo =  modelo;
         this.tipo = tipo;
@@ -24,7 +28,7 @@ public class Hub extends Dispositivo{
         this.bocas= bocas;
         macDispositivosConectados = null;
         ip = null;
-        
+
     }
     @Override
     public Boolean conectarSwitch(Switch marianita) {
@@ -54,7 +58,7 @@ public class Hub extends Dispositivo{
             bocas--;
 
         }
-        return flag;    
+        return flag;
     }
 
     @Override
@@ -67,7 +71,7 @@ public class Hub extends Dispositivo{
             bocas--;
 
         }
-        return flag;        
+        return flag;
     }
 
     @Override
@@ -193,9 +197,9 @@ public class Hub extends Dispositivo{
         this.macDispositivosConectados = macDispositivosConectados;
     }
 
-    
+
     String getMac() {
         return mac;
     }
-    
+
 }

@@ -9,10 +9,14 @@ import java.util.ArrayList;
 
 /**
  *
- * @author Marcos
+ * @author
+ * Marcos J. Peña Pollastri
+ * Emanuel A. Cortez Mercado
+ * Martín L. Castellitto Secreto
+ * Jesus G. Kuti   
  */
 public class AccessPoint extends Dispositivo{
-    
+
     private String ssid;
     private String cifrado;
     private String password;
@@ -23,14 +27,14 @@ public class AccessPoint extends Dispositivo{
     private String defaultSsid;
 
     public AccessPoint() {
-        
+
     }
 
-    public AccessPoint(String mac, String modelo, String tipo, float velocidad, 
-            String normaEthernet, int bocas, String ip,String ssid, String cifrado, 
-            String password, String normaWireless, float velocidadWirelless, String defaultAccess, 
+    public AccessPoint(String mac, String modelo, String tipo, float velocidad,
+            String normaEthernet, int bocas, String ip,String ssid, String cifrado,
+            String password, String normaWireless, float velocidadWirelless, String defaultAccess,
             String pin, String defaultSsid) {
-        
+
         //atributos superclase
         this.mac = mac;
         this.modelo =  modelo;
@@ -39,7 +43,7 @@ public class AccessPoint extends Dispositivo{
         this.normaEthernet = normaEthernet;
         this.bocas= bocas;
         this.ip = ip;
-        
+
         //atributos clase
         this.ssid = ssid;
         this.cifrado = cifrado;
@@ -50,8 +54,8 @@ public class AccessPoint extends Dispositivo{
         this.pin = pin;
         this.defaultSsid = defaultSsid;
     }
-    
-    
+
+
 
     @Override
     public Boolean conectarSwitch(Switch marianita) {
@@ -116,7 +120,7 @@ public class AccessPoint extends Dispositivo{
         return macDispositivosConectados;
     }
 
-    
+
     @Override
     public Boolean conectarAccessPoint(AccessPoint ap) {
         return false;
@@ -143,6 +147,6 @@ public class AccessPoint extends Dispositivo{
     }
 
 
-  
-    
+
+
 }

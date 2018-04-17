@@ -7,7 +7,11 @@ package parcial1;
 
 /**
  *
- * @author Marcos
+ * @author
+ * Marcos J. Peña Pollastri
+ * Emanuel A. Cortez Mercado
+ * Martín L. Castellitto Secreto
+ * Jesus G. Kuti   
  */
 public class Isp {
     private String nombre;
@@ -53,6 +57,6 @@ public class Isp {
         this.medio = medio;
         this.precio = precio;
     }
-    
+
 
 }

@@ -9,12 +9,16 @@ import java.util.ArrayList;
 
 /**
  *
- * @author Marcos
+ * @author
+ * Marcos J. Peña Pollastri
+ * Emanuel A. Cortez Mercado
+ * Martín L. Castellitto Secreto
+ * Jesus G. Kuti   
  */
 public abstract class Equipo{
-    
+
     protected String id;
     protected String modelo;
     protected  ArrayList<PlacaDeRed> placas;
-  
+
 }

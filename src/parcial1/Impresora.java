@@ -9,7 +9,11 @@ import java.util.ArrayList;
 
 /**
  *
- * @author Marcos
+ * @author
+ * Marcos J. Peña Pollastri
+ * Emanuel A. Cortez Mercado
+ * Martín L. Castellitto Secreto
+ * Jesus G. Kuti   
  */
 public class Impresora extends Equipo {
     private String tipo;
@@ -24,7 +28,7 @@ public class Impresora extends Equipo {
         this.id = id;
         placas = null;
     }
-    
+
     public void addPlaca(PlacaDeRed plaquita){
         placas.add(plaquita);
     }
@@ -76,7 +80,7 @@ public class Impresora extends Equipo {
     public void setEstaConectado(Boolean estaConectado) {
         this.estaConectado = estaConectado;
     }
-    
+
     public Boolean conectarPc(Pc pc){
         boolean flag = true;
         if(!estaConectado)

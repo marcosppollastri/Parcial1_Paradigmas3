@@ -7,12 +7,16 @@ package parcial1;
 
 /**
  *
- * @author Marcos
+ * @author
+ * Marcos J. Peña Pollastri
+ * Emanuel A. Cortez Mercado
+ * Martín L. Castellitto Secreto
+ * Jesus G. Kuti   
  */
 public interface IConexionD {
   /*public Boolean conectarDispositivo(Dispositivo dispositivo);
   public Boolean conectarEquipo(Equipo equipo);*/
-    
+
   public Boolean conectarSwitch(Switch marianita);
   public Boolean conectarRouter(Router router);
   public Boolean conectarHub(Hub hub);
