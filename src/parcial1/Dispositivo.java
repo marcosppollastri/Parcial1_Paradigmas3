@@ -4,23 +4,23 @@
  * and open the template in the editor.
  */
 package parcial1;
+
+import java.util.ArrayList;
+
 /**
  *
  * @author Marcos
  */
-public abstract class Dispositivo implements IConexionD{
+public abstract class Dispositivo implements IConexionD, IConexionE{
     
-   private String mac;
-   private String modelo;
-   private String tipo;
-   private float velocidad;
-   private String normaEthernet;
-   private int bocas;
-   private String ip;
-   
-   
-   
- 
+   protected String mac;
+   protected String modelo;
+   protected String tipo;
+   protected float velocidad;
+   protected String normaEthernet;
+   protected int bocas;
+   protected String ip;
+   protected ArrayList<String> macDispositivosConectados;
    
    
     

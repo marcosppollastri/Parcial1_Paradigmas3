@@ -11,9 +11,10 @@ import java.util.ArrayList;
  *
  * @author Marcos
  */
-public abstract class Equipo implements IConexionE{
-    private int id;
-    private String modelo;
-    private ArrayList<PlacaDeRed> placas;
+public abstract class Equipo{
     
+    protected String id;
+    protected String modelo;
+    protected  ArrayList<PlacaDeRed> placas;
+  
 }

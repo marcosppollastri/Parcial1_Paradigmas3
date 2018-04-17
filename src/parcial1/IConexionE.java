@@ -11,4 +11,10 @@ package parcial1;
  */
 public interface IConexionE {
     
+    public Boolean conectarServer(Servidor servidor);
+    public Boolean conectarImpresora(Impresora impresora);
+    public Boolean conectarNotebook(Notebook notebook);
+    public Boolean conectarPc(Pc pc);
+    
+    
 }

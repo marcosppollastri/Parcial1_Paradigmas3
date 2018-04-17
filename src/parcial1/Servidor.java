@@ -11,21 +11,35 @@ import java.util.ArrayList;
  *
  * @author Marcos
  */
-public class Impresora extends Equipo {
-    private String tipo;
+public class Servidor extends Equipo {
+    private String puertos;
     private String ip;
+    private String nombre;
 
-    public Impresora(String tipo, String ip) {
-        this.tipo = tipo;
+    public Servidor(String id, String modelo, String puertos, String ip, String nombre) {
+        this.id = id;
+        this.modelo = modelo;
+        placas = null;
+        
+        this.puertos = puertos;
         this.ip = ip;
+        this.nombre = nombre;
+    }
+    
+    public void addPlaca(PlacaDeRed plaquita){
+        placas.add(plaquita);
     }
 
-    public String getTipo() {
-        return tipo;
+    public String getPuertos() {
+        return puertos;
     }
 
     public String getIp() {
         return ip;
+    }
+
+    public String getNombre() {
+        return nombre;
     }
 
     public String getId() {
@@ -40,12 +54,16 @@ public class Impresora extends Equipo {
         return placas;
     }
 
-    public void setTipo(String tipo) {
-        this.tipo = tipo;
+    public void setPuertos(String puertos) {
+        this.puertos = puertos;
     }
 
     public void setIp(String ip) {
         this.ip = ip;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
     }
 
     public void setId(String id) {

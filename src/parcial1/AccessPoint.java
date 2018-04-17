@@ -9,11 +9,27 @@ package parcial1;
  *
  * @author Marcos
  */
-public class PlacaDeRed extends Dispositivo{
+public class AccessPoint extends Dispositivo{
+    
+    private String ssid;
+    private String cifrado;
+    private String password;
+    private String normaWireless;
+    private float velocidadWirelless;
+    private String defaultAccess;
+    private String pin;
+    private String defaultSsid;
 
-    public PlacaDeRed(String mac, String modelo, String tipo, float velocidad, 
-                        String normaEthernet, int bocas, String ip) {
+    public AccessPoint() {
         
+    }
+
+    public AccessPoint(String mac, String modelo, String tipo, float velocidad, 
+            String normaEthernet, int bocas, String ip,String ssid, String cifrado, 
+            String password, String normaWireless, float velocidadWirelless, String defaultAccess, 
+            String pin, String defaultSsid) {
+        
+        //atributos superclase
         this.mac = mac;
         this.modelo =  modelo;
         this.tipo = tipo;
@@ -21,17 +37,27 @@ public class PlacaDeRed extends Dispositivo{
         this.normaEthernet = normaEthernet;
         this.bocas= bocas;
         this.ip = ip;
+        
+        //atributos clase
+        this.ssid = ssid;
+        this.cifrado = cifrado;
+        this.password = password;
+        this.normaWireless = normaWireless;
+        this.velocidadWirelless = velocidadWirelless;
+        this.defaultAccess = defaultAccess;
+        this.pin = pin;
+        this.defaultSsid = defaultSsid;
     }
+    
+    
 
     @Override
     public Boolean conectarSwitch(Switch marianita) {
         boolean flag = true;
         if(bocas <= 0)
             flag = false;
-        if (flag){
+        if (flag)
             bocas--;
-            macDispositivosConectados.add(marianita.getMac());
-        }
         return flag;
     }
 
@@ -45,10 +71,8 @@ public class PlacaDeRed extends Dispositivo{
         boolean flag = true;
         if(bocas <= 0)
             flag = false;
-        if (flag){
+        if (flag)
             bocas--;
-            macDispositivosConectados.add(hub.getMac());
-        }
         return flag;
     }
 
@@ -59,27 +83,25 @@ public class PlacaDeRed extends Dispositivo{
 
     @Override
     public Boolean conectarServer(Servidor servidor) {
-        return false;
+        return true;
     }
 
     @Override
     public Boolean conectarImpresora(Impresora impresora) {
-        return false;
+        return true;
     }
 
     @Override
     public Boolean conectarNotebook(Notebook notebook) {
-        return false;
+        return true;
     }
 
     @Override
     public Boolean conectarPc(Pc pc) {
-        return false;
+        return true;
     }
 
 
-    
-    
-
+  
     
 }

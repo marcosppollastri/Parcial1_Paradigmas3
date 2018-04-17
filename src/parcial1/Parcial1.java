@@ -15,7 +15,16 @@ public class Parcial1 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+    
+        /*Isp isp = new Isp("Garchanet",5,"tu vieja",600);
+        String nombreIsp = isp.getNombre();
+        System.out.println(nombreIsp);
+        isp.setNombre("Internet para trolos");
+        String nombreIsp2 = isp.getNombre();
+        System.out.println(nombreIsp);
+        System.out.println(nombreIsp2);*/
+        
+        
     }
     
 }
