@@ -20,7 +20,7 @@ public class Router extends Dispositivo{
 
     public Router(Switch marianita, ArrayList<Isp> isp, int cantBocasWan, int cantAntenas) {
         this.marianita = marianita;
-        this.isp = isp;
+        isp = null;
         this.cantBocasWan = cantBocasWan;
         this.cantAntenas = cantAntenas;
     }
@@ -31,8 +31,10 @@ public class Router extends Dispositivo{
         boolean flag = true;
         if(cantBocasWan <= 0)
             flag = false;
-        if (flag)
+        if (flag){
             cantBocasWan--;
+            this.isp.add(isp);
+        }
         return flag;
         
     }

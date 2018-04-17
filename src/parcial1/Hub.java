@@ -22,22 +22,31 @@ public class Hub extends Dispositivo{
         this.velocidad = velocidad;
         this.normaEthernet = normaEthernet;
         this.bocas= bocas;
-        this.ip = ip;
+        macDispositivosConectados = null;
+        ip = null;
         
     }
     @Override
     public Boolean conectarSwitch(Switch marianita) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        boolean flag = true;
+        if(bocas <= 0)
+            flag = false;
+        if (flag){
+            macDispositivosConectados.add(marianita.getMac());
+            bocas--;
+
+        }
+        return flag;
     }
 
     @Override
     public Boolean conectarRouter(Router router) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return false;
     }
 
     @Override
     public Boolean conectarHub(Hub hub) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return false;
     }
 
     @Override
@@ -47,7 +56,22 @@ public class Hub extends Dispositivo{
 
     @Override
     public Boolean conectarServer(Servidor servidor) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        ArrayList<PlacaDeRed> placasDeServer  = servidor.getPlacas();
+        boolean flag = true;
+        if(bocas <= 0)
+            flag = false;
+        if (flag && !placasDeServer.isEmpty()){
+            for(int i = 0; i < placasDeServer.size(); i++){
+                if(!placasDeServer.get(i).EstaConectado()){
+                    macDispositivosConectados.add(placasDeServer.get(i).getMac());
+                    bocas--;
+                    break;
+                }
+            }
+
+
+        }
+        return flag;
     }
 
     @Override

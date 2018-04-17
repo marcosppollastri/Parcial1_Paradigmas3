@@ -5,6 +5,8 @@
  */
 package parcial1;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author Marcos
@@ -76,6 +78,39 @@ public class AccessPoint extends Dispositivo{
         return flag;
     }
 
+    public String getMac() {
+        return mac;
+    }
+
+    public String getModelo() {
+        return modelo;
+    }
+
+    public String getTipo() {
+        return tipo;
+    }
+
+    public float getVelocidad() {
+        return velocidad;
+    }
+
+    public String getNormaEthernet() {
+        return normaEthernet;
+    }
+
+    public int getBocas() {
+        return bocas;
+    }
+
+    public String getIp() {
+        return ip;
+    }
+
+    public ArrayList<String> getMacDispositivosConectados() {
+        return macDispositivosConectados;
+    }
+
+    
     @Override
     public Boolean conectarAccessPoint(AccessPoint ap) {
         return false;

@@ -5,6 +5,8 @@
  */
 package parcial1;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author Marcos
@@ -91,6 +93,74 @@ public class PlacaDeRed extends Dispositivo{
     @Override
     public Boolean conectarPc(Pc pc) {
         return false;
+    }
+
+    public boolean isEstaConectado() {
+        return estaConectado;
+    }
+
+    public String getMac() {
+        return mac;
+    }
+
+    public String getModelo() {
+        return modelo;
+    }
+
+    public String getTipo() {
+        return tipo;
+    }
+
+    public float getVelocidad() {
+        return velocidad;
+    }
+
+    public String getNormaEthernet() {
+        return normaEthernet;
+    }
+
+    public int getBocas() {
+        return bocas;
+    }
+
+    public String getIp() {
+        return ip;
+    }
+
+    public ArrayList<String> getMacDispositivosConectados() {
+        return macDispositivosConectados;
+    }
+
+    public void setMac(String mac) {
+        this.mac = mac;
+    }
+
+    public void setModelo(String modelo) {
+        this.modelo = modelo;
+    }
+
+    public void setTipo(String tipo) {
+        this.tipo = tipo;
+    }
+
+    public void setVelocidad(float velocidad) {
+        this.velocidad = velocidad;
+    }
+
+    public void setNormaEthernet(String normaEthernet) {
+        this.normaEthernet = normaEthernet;
+    }
+
+    public void setBocas(int bocas) {
+        this.bocas = bocas;
+    }
+
+    public void setIp(String ip) {
+        this.ip = ip;
+    }
+
+    public void setMacDispositivosConectados(ArrayList<String> macDispositivosConectados) {
+        this.macDispositivosConectados = macDispositivosConectados;
     }
 
 
