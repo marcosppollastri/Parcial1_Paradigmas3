@@ -12,7 +12,7 @@ import java.util.ArrayList;
  * @author Marcos
  */
 public class Servidor extends Equipo {
-    private String puertos;
+   // private String puertos;
     private String ip;
     private String nombre;
 
@@ -21,18 +21,31 @@ public class Servidor extends Equipo {
         this.modelo = modelo;
         placas = null;
         
-        this.puertos = puertos;
+      //  this.puertos = puertos;
         this.ip = ip;
         this.nombre = nombre;
     }
     
     public void addPlaca(PlacaDeRed plaquita){
         placas.add(plaquita);
+        
+    }
+    
+    public boolean sePuedeConectar(){
+        boolean flag = true;
+        if(placas.isEmpty())
+            flag = false;
+        for(int i = 0; i < placas.size(); i++){
+            if(!placas.get(i).EstaConectado())
+                flag = true;
+            break;
+        }
+        return flag;
     }
 
-    public String getPuertos() {
+    /*public String getPuertos() {
         return puertos;
-    }
+    }*/
 
     public String getIp() {
         return ip;
@@ -54,9 +67,9 @@ public class Servidor extends Equipo {
         return placas;
     }
 
-    public void setPuertos(String puertos) {
+   /* public void setPuertos(String puertos) {
         this.puertos = puertos;
-    }
+    }*/
 
     public void setIp(String ip) {
         this.ip = ip;

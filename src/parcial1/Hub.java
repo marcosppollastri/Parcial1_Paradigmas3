@@ -13,6 +13,18 @@ import java.util.ArrayList;
  */
 public class Hub extends Dispositivo{
 
+        public Hub(String mac, String modelo, String tipo, float velocidad, 
+                        String normaEthernet, int bocas) {
+        
+        this.mac = mac;
+        this.modelo =  modelo;
+        this.tipo = tipo;
+        this.velocidad = velocidad;
+        this.normaEthernet = normaEthernet;
+        this.bocas= bocas;
+        this.ip = ip;
+        
+    }
     @Override
     public Boolean conectarSwitch(Switch marianita) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.

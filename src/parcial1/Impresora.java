@@ -15,9 +15,16 @@ public class Impresora extends Equipo {
     private String tipo;
     private String ip;
 
-    public Impresora(String tipo, String ip) {
+    public Impresora(String modelo, String id,String tipo, String ip) {
         this.tipo = tipo;
         this.ip = ip;
+        this.modelo = modelo;
+        this.id = id;
+        placas = null;
+    }
+    
+    public void addPlaca(PlacaDeRed plaquita){
+        placas.add(plaquita);
     }
 
     public String getTipo() {

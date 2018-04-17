@@ -10,10 +10,14 @@ package parcial1;
  * @author Marcos
  */
 public class PlacaDeRed extends Dispositivo{
+    
+    private boolean estaConectado;
 
     public PlacaDeRed(String mac, String modelo, String tipo, float velocidad, 
                         String normaEthernet, int bocas, String ip) {
         
+        estaConectado = false;
+        macDispositivosConectados = null;
         this.mac = mac;
         this.modelo =  modelo;
         this.tipo = tipo;
@@ -30,11 +34,22 @@ public class PlacaDeRed extends Dispositivo{
             flag = false;
         if (flag){
             bocas--;
+            estaConectado = true;
             macDispositivosConectados.add(marianita.getMac());
         }
         return flag;
     }
 
+    public boolean EstaConectado() {
+        return estaConectado;
+    }
+
+    public void setEstaConectado(boolean estaConectado) {
+        this.estaConectado = estaConectado;
+    }
+
+    
+    
     @Override
     public Boolean conectarRouter(Router router) {
         return false;
@@ -47,6 +62,7 @@ public class PlacaDeRed extends Dispositivo{
             flag = false;
         if (flag){
             bocas--;
+            estaConectado = true;
             macDispositivosConectados.add(hub.getMac());
         }
         return flag;
